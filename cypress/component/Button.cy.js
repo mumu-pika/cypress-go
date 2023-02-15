@@ -1,4 +1,4 @@
-import Button from '../../src/components/Button.vue'
+import Button from '@/components/Button.vue'
 
 describe('<Button />', () => {
   it('test button ', () => {
@@ -9,5 +9,6 @@ describe('<Button />', () => {
         }
       })
       cy.get('button').should('contains.text', 'Click me!')
+      cy.get('button').click() // 点击按钮
   })
 })

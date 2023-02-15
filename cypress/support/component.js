@@ -15,13 +15,22 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import 'cypress-jest-adapter'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
 import { mount } from 'cypress/vue'
 
-Cypress.Commands.add('mount', mount)
+// Cypress.Commands.add('mount', mount)
+
+// 这里自定义mount指令为的是使用vtu中
+// https://docs.cypress.io/guides/component-testing/vue/examples
+Cypress.Commands.add('mount', (...args) => {
+  return mount(...args).then(({ wrapper }) => {
+    return cy.wrap(wrapper).as('wrapper')
+  })
+})
 
 // Example use:
 // cy.mount(MyComponent)

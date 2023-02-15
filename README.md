@@ -28,4 +28,8 @@ yarn add cypress -D
 yarn add @cypress/vue@next @cypress/vite-dev-server --dev
 ```
 
-
+### 安装jest语法适配
+```bash
+# https://github.com/phongnd39/cypress-jest-adapter
+yarn add -D cypress-jest-adapter
+```

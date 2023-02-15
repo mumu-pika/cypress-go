@@ -6,8 +6,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "test:e2e": "cypress open",
-    "test:ct": "cypress open-ct"
+    "test": "cypress open",
+    "test:e2e": "cypress open --e2e",
+    "test:ct": "cypress open --component"
   },
   "dependencies": {
     "vue": "^3.2.25"
@@ -15,6 +16,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.4",
     "cypress": "^12.5.1",
+    "cypress-jest-adapter": "^0.1.1",
     "vite": "^2.9.15"
   }
 }
